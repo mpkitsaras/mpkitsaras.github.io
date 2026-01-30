@@ -294,3 +294,41 @@ ol li::marker {
 }
 
 
+/* ====== MOBILE IMAGE FIXES ====== */
+
+@media (max-width: 900px) {
+
+  /* Disable floats on mobile */
+  .float-imagel,
+  .float-imager,
+  .float-figure {
+    float: none !important;
+    width: 100%;
+    max-width: 100%;
+    margin: 1.5rem auto;
+    display: block;
+  }
+
+  .float-imagel,
+  .float-imager {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  /* Images scale properly */
+  .float-imagel img,
+  .float-imager img,
+  .float-figure img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  /* Caption stays with image */
+  .float-figure figcaption {
+    width: 100%;
+    position: relative;
+    margin-top: 0.4rem;
+    border-radius: 0 0 6px 6px;
+  }
+}
